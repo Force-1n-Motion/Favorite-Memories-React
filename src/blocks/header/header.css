@@ -1,0 +1,14 @@
+.header {
+    max-width: 880px;
+    min-height: 74px;
+    margin: 45px auto 40px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+   
+}
+
+@media (max-width: 400px) {
+  .header {
+    margin: 28px auto 42px;
+    min-height: 56px;
+  }
+}
