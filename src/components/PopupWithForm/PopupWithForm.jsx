@@ -4,7 +4,7 @@ export default function PopupWithForm({name, title, Button, children, open, onCl
       <div className="popup__container">
         <button type="button" className="popup__close" aria-label="Закрыть" onClick={onClose}/>
         <h2 className="popup__title">{title}</h2>
-        <form className="popup__form" name="name" noValidate="">
+        <form className="popup__form" name="userName" noValidate="">
           {children}
           <button
             type="submit"

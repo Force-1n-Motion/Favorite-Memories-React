@@ -15,7 +15,8 @@ export default function Main({ onEditProfile, onEditAvatar, onAddPlace, onCardCl
         setUserAvatar(userBox.avatar)
         cardBox.forEach(data => data.idDeveloper = userBox._id)
         setCards(cardBox)
-    })
+      })
+      .catch((error => console.error(`Чрезвычайное происшествие ${error}`)))
   },[])
   
   return (

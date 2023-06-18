@@ -1,6 +1,6 @@
 export default function Card({ card, onCardClick }) {
   return (
-    <div class="elements">
+    <div className="elements">
       <article className="element">
         <button type="button" className="element__button-delete" />
         <img
