@@ -1,8 +1,20 @@
-export default function Card({ card, onCardClick }) {
+import { useContext } from "react";
+import CurrentUserContext from "../../Contexts/CurrentUserContext";
+import LikeItems from "../LikeItems/LikeItems";
+
+export default function Card({ card, onCardClick, onDelete }) {
+  const currentUser = useContext(CurrentUserContext);
+
   return (
     <div className="elements">
       <article className="element">
-        <button type="button" className="element__button-delete" />
+        {currentUser._id === card.owner._id && (
+          <button
+            type="button"
+            className="element__button-delete"
+            onClick={() => onDelete(card._id)}
+          />
+        )}
         <img
           src={card.link}
           alt={card.name}
@@ -11,8 +23,11 @@ export default function Card({ card, onCardClick }) {
         />
         <div className="element__content">
           <h2 className="element__text">{card.name}</h2>
-          <button type="button" className="element__button-like" />
-          <span className="elements__counter">0</span>
+          <LikeItems
+            likes={card.likes}
+            idDeveloper={currentUser._id}
+            idCard={card._id}
+          />
         </div>
       </article>
     </div>

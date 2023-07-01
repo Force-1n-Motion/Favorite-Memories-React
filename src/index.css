@@ -40,6 +40,7 @@
 @import url(./blocks/popup/__input_errored/popup__input_errored.css);
 @import url(./blocks/popup/__error_visible/popup__error_visible.css);
 @import url(./blocks/popup/__save/_disabled/popup__save_disabled.css);
+@import url(./blocks/popup/__save/_loader/popup__save_loader.css);
 @import url(./blocks/popup/__form/popup__form.css);
 
 

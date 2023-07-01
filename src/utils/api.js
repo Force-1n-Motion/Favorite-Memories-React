@@ -22,7 +22,7 @@
     })
       .then(this._verification);
   }
-
+  
   setUserInfo(data) {
     return fetch(`${this._url}/users/me`, {
       method: "PATCH",
